@@ -1,6 +1,6 @@
 # Local TTS Server
 
-Offline Text-to-Speech server compatible with OpenAI API.
+Offline Text-to-Speech server.
 
 Engines:
 - Silero (EN, RU)
