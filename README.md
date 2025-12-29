@@ -1,4 +1,4 @@
-# 🗣️ Local TTS Server
+# Local TTS Server
 
 Offline Text-to-Speech server compatible with OpenAI API.
 
@@ -25,11 +25,31 @@ docker run --rm -p 5003:5003 --name local-tts -v "$(pwd)/config.env":/app/config
 curl http://localhost:5003/audio/voices
 ```
 
+
+
 ### Generate speech
+
+Russian text → Russian voice
+```shell
+curl -X POST http://localhost:5003/audio/speech \
+  -H "Content-Type: application/json" \
+  -d '{"input":"Привет мир","voice":"aidar"}' \
+  -o out.wav
+```
+
+English text → English voice
+```shell
+curl -X POST http://localhost:5003/audio/speech \
+  -H "Content-Type: application/json" \
+  -d '{"input":"Hello world","voice":"alan-medium"}' \
+  -o out.wav
+```
+
+Bulgarian text → Bulgarian voice
 
 ```shell
 curl -X POST http://localhost:5003/audio/speech \
   -H "Content-Type: application/json" \
-  -d '{"input":"Hello world","voice":"aidar"}' \
+  -d '{"input":"Здравей свят","voice":"dimitar-medium"}' \
   -o out.wav
 ```
