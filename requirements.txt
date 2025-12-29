@@ -1,0 +1,18 @@
+fastapi==0.115.12
+uvicorn==0.34.0
+
+torch==2.6.0
+numpy==2.2.4
+
+# --- Silero runtime deps ---
+omegaconf==2.3.0
+
+# --- Piper runtime deps ---
+piper-tts==1.2.0
+piper-phonemize==1.1.0
+onnxruntime==1.21.0
+
+# --- infra ---
+huggingface-hub[hf_xet]>=0.30.2
+PyYAML==6.0.2
+python-dotenv==1.1.0

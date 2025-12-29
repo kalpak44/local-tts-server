@@ -1,0 +1,47 @@
+silero:
+  repo_dir: silero_repo
+  repo_git_url: https://github.com/snakers4/silero-models.git
+  models:
+    ru_v4:
+      language_code: ru
+      model_id: v4_ru
+      package_url: https://models.silero.ai/models/tts/ru/v4_ru.pt
+      voices:
+        aidar: Айдар
+        baya: Байя
+        kseniya: Ксения
+        xenia: Женя
+        eugene: Евгений
+
+    en_v3:
+      language_code: en
+      model_id: v3_en
+      package_url: https://models.silero.ai/models/tts/en/v3_en.pt
+      speakers_generic_pattern: en_{id}
+      speakers_generic_count: 10
+
+piper:
+  models_dir: piper_models
+  hf_repo_id: rhasspy/piper-voices
+  languages:
+    bg:
+      voices:
+        dimitar-medium:
+          subpath_no_ext: bg/bg_BG/dimitar/medium/bg_BG-dimitar-medium
+          name: Dimitar (BG)
+    en:
+      voices:
+        alan-medium:
+          subpath_no_ext: en/en_GB/alan/medium/en_GB-alan-medium
+          name: Alan (EN)
+        amy-medium:
+          subpath_no_ext: en/en_US/amy/medium/en_US-amy-medium
+          name: Amy (EN)
+    ru:
+      voices:
+        irina:
+          subpath_no_ext: ru/ru_RU/irina/medium/ru_RU-irina-medium
+          name: Ирина
+        denis:
+          subpath_no_ext: ru/ru_RU/denis/medium/ru_RU-denis-medium
+          name: Денис
