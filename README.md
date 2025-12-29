@@ -1,4 +1,4 @@
-# 🗣️ Local OpenAI-Compatible TTS Server
+# 🗣️ Local TTS Server
 
 Offline Text-to-Speech server compatible with OpenAI API.
 
