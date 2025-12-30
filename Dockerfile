@@ -9,6 +9,14 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
+# Copy voices definitions and download script first
+COPY voices_definitions.yaml .
+COPY download_models.py .
+
+# Pre-download all models during build time for offline use
+RUN python download_models.py
+
+# Copy the rest of the application
 COPY . .
 
 EXPOSE 5003
