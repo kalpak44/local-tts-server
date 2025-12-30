@@ -27,7 +27,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/local-openai-tts
+            ${{ secrets.DOCKERHUB_USERNAME }}/tts-server
           tags: |
             type=raw,value=latest
             type=sha
