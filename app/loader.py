@@ -62,13 +62,17 @@ def load_all():
             for vid, v in lang_def["voices"].items():
                 base = v["subpath_no_ext"]
 
+                # Models are pre-downloaded during Docker build
+                # hf_hub_download will use cached files if available
                 onnx = hf_hub_download(
                     repo_id=defs["piper"]["hf_repo_id"],
                     filename=base + ".onnx",
+                    local_files_only=True,  # Use offline mode
                 )
                 cfg = hf_hub_download(
                     repo_id=defs["piper"]["hf_repo_id"],
                     filename=base + ".onnx.json",
+                    local_files_only=True,  # Use offline mode
                 )
 
                 piper_models[vid] = PiperVoice.load(onnx, cfg)
